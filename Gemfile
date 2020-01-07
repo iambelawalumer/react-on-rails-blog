@@ -5,6 +5,10 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem "react_on_rails", "11.0.0"
+gem "webpacker", "~> 3"
+gem 'mini_racer', platforms: :ruby
+
 #Auth
 gem 'devise'
 
@@ -66,10 +70,10 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 group :development do
-		  gem 'sqlite3'
-		end
+	gem 'sqlite3'
+end
 
-		group :production do
-		  gem 'pg'
-		  gem 'rails_12factor'
+group :production do
+	gem 'pg'
+	gem 'rails_12factor'
 end
