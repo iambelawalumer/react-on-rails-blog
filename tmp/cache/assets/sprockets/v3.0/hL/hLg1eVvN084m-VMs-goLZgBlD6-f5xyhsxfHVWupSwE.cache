@@ -1,0 +1,7 @@
+I"o(function() {
+  $('#delete-comment').bind('ajax:success', function() {
+    alert();
+  });
+
+}).call(this);
+:ET

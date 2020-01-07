@@ -1,0 +1,37 @@
+<header>
+  <div class="container-fluid position-relative no-side-padding">
+
+    <a href="/" class="logo"><%= image_tag ("images/logo.png"), :alt => "Logo Image" %></a>
+
+    <div class="menu-nav-icon" data-nav-menu="#main-menu">
+      <i class="ion-navicon"></i>
+    </div>
+
+    <ul class="main-menu visible-on-click" id="main-menu">
+      <li>
+        <a href="/">Home</a>
+      </li>
+      <li>
+        <%= link_to "Make Post", new_post_path %>
+      </li>
+    </ul>
+
+    <ul class="visible-on-click" id="main-menu" style="float:right">
+      <% if(user_signed_in?) %>
+        <li><%= link_to "Log out", destroy_user_session_path,method: :delete,:class => 'btn btn-outline-danger m-r-10 m-t-10' %></li>
+        <li><%= link_to current_user.name, edit_user_registration_path, :class => 'btn btn-outline-success m-r-10 m-t-10' %></li>
+
+      <% else %>
+
+        <li><%= link_to "Sign in", new_user_session_path, :class => 'btn btn-outline-secondary m-r-10 m-t-10' %></li>
+
+        <li><%= link_to "Sign up", new_user_registration_path, :class => 'btn btn-outline-secondary m-r-10 m-t-10'%></li>
+
+      <% end %>
+      <!-- main-menu -->
+
+      <!-- <div class="src-area"> <form> <button class="src-btn" type="submit"> <i class="ion-ios-search-strong"></i> </button> <input class="src-input" type="text" placeholder="Type of search"> </form> </div> -->
+
+    </div>
+    <!-- conatiner -->
+  </header>

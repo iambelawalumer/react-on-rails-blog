@@ -1,0 +1,11 @@
+<section id="comments">
+  <%= form_for([@post, @post.comments.build]) do |f| %>
+    <p>
+      <%= f.text_area(:body, {:class => 'form-control col-md-6', :placeholder => 'Post your Comment', :required => true }) %>
+    </p>
+
+    <p>
+      <%= f.submit("Comment",{:class => 'btn btn-outline-info m-t-20'}) %>
+    </p>
+  <% end %>
+</section>

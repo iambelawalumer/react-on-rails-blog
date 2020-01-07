@@ -1,0 +1,11 @@
+<div class="container m-b-15">
+  <div class="row">
+    <% if resource.errors.any? %>
+      <div id="error_explanation">
+        <% resource.errors.full_messages.each do |message| %>
+          <div class="badge badge-danger"><%= message %></div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>

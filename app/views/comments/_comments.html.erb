@@ -1,0 +1,24 @@
+<div class="row">
+      <div class="col-sm-8">
+        <div class="card">
+          <div class="card-header">
+            <b>Comments</b>
+          </div>
+          <div class="card-block">
+            <% @post.comments.each do |comment| %>
+
+            <p class="card-text"<%=comment%>><strong><%= comment.user&.name %></strong> <%= comment.body%>
+              <% if comment.post.user == current_user %>
+               <%= link_to  'X', [comment.post, comment], method: :delete, :class => 'delete',
+               :remote => true, :style => "float:right;color:red;font-size:13px" %>
+              <% end %>
+            </p>
+            <br>
+            <% end %>
+          </div>
+        </div>
+      </div>
+</div>
+
+
+
