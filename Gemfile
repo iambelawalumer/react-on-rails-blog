@@ -16,7 +16,7 @@ gem 'devise'
 gem 'friendly_id', '~> 5.2.4'
 
 #Image Uploader
-gem 'carrierwave', '~> 2.0'
+gem 'carrierwave', '~> 2.1'
 
 #Pagination
 gem 'will_paginate', '~> 3.1.1'
